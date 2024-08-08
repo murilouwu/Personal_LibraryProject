@@ -1,0 +1,100 @@
+<!DOCTYPE html>          
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="https://kit.fontawesome.com/39cab4bf95.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+        <script src="java/javaBasic.js"></script>
+        <link rel="shortcut icon" href="imgs/logoVersion/LogoRed.webp">
+        <title>Códice</title>
+    </head>
+    <body>
+        <div class="mouse">
+            <span id="mouseIcon"></span>
+            <span id="contextInfoMouse"></span>
+        </div>
+        <div class="menu">
+            <div class="TopMenu">
+                <i class="fa-brands fa-youtube" onmouseover="txtMouse('Meu Canal', 11)" onmouseout="resetMouse()" onclick="redirectNewPage('https://www.youtube.com/channel/UC5j326FDOeG70i3KixHsTSw')"></i>
+                <i class="fa-brands fa-facebook" onmouseover="txtMouse('Meu Face', 11)" onmouseout="resetMouse()" onclick="redirectNewPage('https://www.facebook.com/murilo.gimenez.7543/')"></i>
+                <i class="fa-brands fa-twitter" onmouseover="txtMouse('Meu X', 11)" onmouseout="resetMouse()" onclick="redirectNewPage('https://twitter.com/v43410730')"></i>
+                <i class="fa-brands fa-instagram" onmouseover="txtMouse('Meu Insta', 11)" onmouseout="resetMouse()" onclick="redirectNewPage('https://www.instagram.com/murilaodasaladadedesenho/')"></i>
+            </div>
+            <div class="MainTitle">
+                <img src="imgs/logoVersion/LogoRed.webp" class="Logo">
+                <h1 class="Title">Códice</h1>
+            </div>
+            <div class="Btns">
+                <button class="btnMenu" onclick="TransitoinJs(0)" onmouseover="txtMouse('', 11)" onmouseout="resetMouse()">Iniciar</button>
+                <button class="btnMenu" onmouseover="txtMouse('', 7)" onmouseout="resetMouse()">Configurações</button>
+            </div>
+        </div>
+        <div class="estante">
+            <div class="TemaStand">
+                <div class="rollThemes">
+                    <div class="theme">LivrosGeral</div>
+                    <div class="theme">Escolar</div>
+                    <div class="theme">Quadrinhos</div>
+                    <div class="theme">Criação Própria</div>
+                    <div class="theme">....</div>
+                </div>
+                <div class="Estant">
+                    <div class="topEstant"></div>
+                    <div class="Fileira">
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                    </div>
+                    <div class="Fileira">
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                    </div>
+                    <div class="Fileira">
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                    </div>
+                    <div class="FootEstant"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).mousemove((event)=>{
+            var data = {
+                x: event.pageX +1,
+                y: event.pageY +1
+            };
+
+            $('.mouse').css({
+                left: data.x + 'px',
+                top: data.y + 'px'
+            });
+        });
+        
+        function TransitoinJs(caseFun){
+            let Menu = $('.menu');
+            let Estante = $('.estante');
+            switch(caseFun){
+                case 0:
+                    Menu.css({
+                        animation: 'MenuLeft 1.7s linear infinite'
+                    });
+                    setTimeout(()=>{
+                        Menu[0].css({
+                            animation: 'none',
+                            display: 'none'
+                        });
+                    }, 1700)
+                break;
+
+                default:  
+                break;
+            }
+        }
+    </script>
+</html>

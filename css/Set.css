@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bonbon&family=Great+Vibes&family=Grey+Qo&family=Indie+Flower&family=Kaushan+Script&family=Monsieur+La+Doulaise&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+Khitan+Small+Script&family=Noto+Serif+Tibetan:wght@100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sankofa+Display&family=Sedgwick+Ave+Display&family=Shadows+Into+Light&family=UnifrakturMaguntia&family=VT323&display=swap');
+:root {
+    --ft00: 'Bebas Neue', sans-serif;
+    --ft01: 'Bonbon', cursive;
+    --ft02: 'Great Vibes', cursive;
+    --ft03: 'Grey Qo', sans-serif;
+    --ft04: 'Indie Flower', cursive;
+    --ft05: 'Kaushan Script', cursive;
+    --ft06: 'Monsieur La Doulaise', cursive;
+    --ft07: 'Noto Sans JP', sans-serif;
+    --ft08: 'Noto Sans KR', sans-serif;
+    --ft09: 'Noto Sans TC', sans-serif;
+    --ft10: 'Noto Serif Khitan Small Script', serif;
+    --ft11: 'Noto Serif Tibetan', serif;
+    --ft12: 'Orbitron', sans-serif;
+    --ft13: 'Oswald', sans-serif;
+    --ft14: 'Pacifico', cursive;
+    --ft15: 'Roboto', sans-serif;
+    --ft16: 'Sankofa Display', serif;
+    --ft17: 'Sedgwick Ave Display', cursive;
+    --ft18: 'Shadows Into Light', cursive;
+    --ft19: 'UnifrakturMaguntia', cursive;
+    --ft20: 'VT323', monospace;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    transition: 0.2s;
+    cursor: none;
+}
+
+/*web-kit*/
+    input[type=file] {
+        display: none;
+    }
+
+    ::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgb(0 0 0 /50%);
+        display: none;
+    }
+
+    .ocultar {
+        display: none;
+    }
+
+    button:focus, button:focus-visible, input:focus-visible, input:focus, select:focus-visible, select:focus, textarea:focus-visible, textarea:focus {
+        outline: none;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: overlay;
+    }
+
+    .mouse{
+        position: absolute;
+        z-index: 100;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 4vh;
+        align-items: center;
+        transition: none;
+    }
+        #mouseIcon{
+            width: 4vh;
+            height: 4vh;
+            background-image: url("../imgs/mouse/Use.webp");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: hue-rotate(300deg) saturate(1) contrast(10);
+        }
+        #contextInfoMouse{
+            opacity: 0%;
+            color: #ecdeef;
+            padding: 1vh 2vw;
+            font-style: italic;
+            font-family: var(--ft00);
+            font-size: 2vh;
+            letter-spacing: 0.2vw;
+            margin-left: 1vw;
+            overflow-x: overlay;
+            backdrop-filter: saturate(51%) brightness(40%) blur(0.1vw);
+            clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+        }

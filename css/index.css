@@ -1,0 +1,101 @@
+@import 'Set.css';
+
+body{
+    background-image: url(../imgs/Home.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+@keyframes MenuLeft{
+    0%{
+        clip-path: polygon(0% 0%, 0% 50%, 0% 100%, 0% 100%, 0% 50%, 0% 0%, 0% 0%, 0% 100%, 0% 100%, 100% 100%, 100% 0%);
+    }
+    20%{
+        clip-path: polygon(5% 0%, 10% 50%, 5% 100%, 10% 100%, 15% 50%, 10% 0%, 13% 0%, 18% 50%, 13% 100%, 100% 100%, 100% 0%);
+    }
+    40%{
+        clip-path: polygon(32% 0%, 37% 50%, 32% 100%, 37% 100%, 42% 50%, 37% 0%, 40% 0%, 45% 50%, 40% 100%, 100% 100%, 100% 0%);
+    }
+    60%{
+        clip-path: polygon(62% 0%, 67% 50%, 62% 100%, 67% 100%, 72% 50%, 67% 0%, 70% 0%, 75% 50%, 70% 100%, 100% 100%, 100% 0%);
+    }
+    80%{
+        clip-path: polygon(77% 0%, 82% 50%, 77% 100%, 82% 100%, 87% 50%, 82% 0%, 85% 0%, 90% 50%, 85% 100%, 100% 100%, 100% 0%);
+    }
+    100%{
+        clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 100% 100%, 100% 50%, 100% 0%, 100% 0%, 100% 50%, 100% 100%, 100% 100%, 100% 0%);
+    }    
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #36558b70;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px) saturate(40%) contrast(78%);
+    animation: none;
+}
+
+    .menu .TopMenu {
+        display: flex;
+        gap: 5vw;
+        margin-top: 2vh;
+        color: white;
+        font-size: 2vh;
+        position: absolute;
+    }
+
+        .TopMenu i:hover{
+            font-size: 2.5vh;
+        }
+
+    .menu .MainTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 23vh;
+    }
+
+        .MainTitle .Logo {
+            width: 40vh;
+            height: auto;
+            filter: drop-shadow(2px 2px 5px #f54781);
+        }
+
+        .MainTitle .Title {
+            align-self: end;
+            font-size: 10vh;
+            font-weight: bold;
+            font-style: italic;
+            font-family: var(--ft16);
+            color: #edd8df;
+            margin-left: -7vh;
+            z-index: 1;
+            letter-spacing: 0.6vw;
+            filter: drop-shadow(2px 2px 0px #f54781);
+        }
+
+    .menu .Btns {
+        display: flex;
+        gap: 2vw;
+        margin-top: 10vh;
+    }
+
+        .Btns .btnMenu {
+            background-color: #5550;
+            color: #edd8df;
+            border: none;
+            padding: 1vh 3vw;
+            font-size: 2vh;
+            font-family: var(--ft17);
+            letter-spacing: 0.2vw;
+            clip-path: polygon(17% 0%, 70% 0, 100% 50%, 74% 100%, 13% 100%, 18% 34%);
+        }
+
+            .Btns .btnMenu:hover {
+                background-color: #90239961;
+            }
